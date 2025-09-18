@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {toast} from 'react-toastify';
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -28,9 +28,9 @@ const Contact = () => {
         }
       })
       .catch((err) => console.error("Error submitting feedback:", err));
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 3000);
+    setTimeout(() => {
+      setSubmitted(false);
+    }, 3000);
   };
 
   return (
@@ -39,7 +39,7 @@ const Contact = () => {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-extrabold">Contact Us</h1>
         <p className="text-gray-400 mt-2">
-          Have questions or feedback? We’d love to hear from you.
+          Have questions or feedback? We&apos;d love to hear from you.
         </p>
       </div>
 
@@ -51,7 +51,7 @@ const Contact = () => {
 
           {submitted ? (
             <p className="text-green-400 font-semibold">
-              ✅ Thanks for reaching out! We'll get back to you soon.
+              ✅ Thanks for reaching out! We&apos;ll get back to you soon.
             </p>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -106,7 +106,7 @@ const Contact = () => {
           <h2 className="text-2xl font-bold">Get in Touch</h2>
           <p className="text-gray-400">
             Whether you have a question about your order, products, or just want
-            to say hi, we’re here for you.
+            to say hi, we&apos;re here for you.
           </p>
 
           <div className="space-y-3">
