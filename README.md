@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+HackersWear.com
 
-## Getting Started
+HackersWear.com is a sleek, modern e-commerce platform designed for tech enthusiasts and hackers who want to express their style. Our mission is to combine cutting-edge fashion with hacker culture, providing unique apparel and accessories for the digital generation.
 
-First, run the development server:
+🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+User Authentication – Sign up, log in, and manage your account securely.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Product Catalog – Browse a wide range of hacker-themed clothing and accessories.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Shopping Cart & Checkout – Add items to your cart, update quantities, and checkout seamlessly.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Order Management – Track your orders and view purchase history.
 
-## Learn More
+Responsive Design – Works flawlessly on desktop, tablet, and mobile devices.
 
-To learn more about Next.js, take a look at the following resources:
+Secure Payments – Integration with [Payment Provider] for safe transactions.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🛠 Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Frontend: React, Next.js, Tailwind CSS
 
-## Deploy on Vercel
+Backend: Node.js, Express.js
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Database: MongoDB
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Authentication: JWT, bcrypt
+
+Email Service: Nodemailer (for password reset and notifications)
+
+Hosting: [Vercel / Your Hosting Provider]
+
+📝 Project Structure
+hackerswear.com/
+├── components/      # Reusable UI components
+├── pages/           # Next.js pages
+├── models/          # Database models
+├── middleware/      # Custom middleware (DB connection, auth, etc.)
+├── public/          # Static assets
+├── styles/          # CSS / Tailwind styles
+└── utils/           # Utility functions
+
+🤝 Contributing
+
+We welcome contributions from the community! To contribute:
+
+Fork the repository
+
+Create a new branch: git checkout -b feature/YourFeature
+
+Make your changes and commit: git commit -m 'Add some feature'
+
+Push to the branch: git push origin feature/YourFeature
+
+Open a Pull Request
+
+📧 Contact
+
+For support or business inquiries:
+Email: vanshahluwalia29@gmail.com

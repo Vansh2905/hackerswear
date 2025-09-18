@@ -194,8 +194,6 @@ const Checkout = () => {
               className="w-full p-3 rounded-lg bg-gray-50 border border-gray-400 text-black hover:cursor-pointer"
             >
               <option value="COD">Cash on Delivery</option>
-              <option value="Card">Credit/Debit Card</option>
-              <option value="UPI">UPI</option>
             </select>
 
             <button

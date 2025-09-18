@@ -241,7 +241,7 @@ export default function ProductPage({ params }) {
                   }
 
                   if (!isLoggedIn) {
-                    router.push("/login");
+                    router.push("/Login");
                     return;
                   }
 
@@ -269,9 +269,11 @@ export default function ProductPage({ params }) {
                     return;
                   }
                   if (!isLoggedIn) {
-                    router.push("/login");
+                    router.push("/Login");
                   }
-                  addCart(
+                  else
+                  {
+                    addCart(
                     slug,
                     quantity,
                     product.price,
@@ -280,6 +282,7 @@ export default function ProductPage({ params }) {
                     selectedColor
                   );
                   toast.success("Added to cart", { position: "bottom-left", autoClose: 2000});
+                }
                 }}
                 className="w-1/2 bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition font-semibold"
               >

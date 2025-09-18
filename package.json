@@ -20,6 +20,7 @@
     "next": "15.5.2",
     "next-auth": "^4.24.11",
     "nextjs-toploader": "^3.9.17",
+    "nodemailer": "^6.10.1",
     "prop-types": "^15.8.1",
     "react": "19.1.0",
     "react-dom": "19.1.0",
