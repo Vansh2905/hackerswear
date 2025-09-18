@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { toast } from "react-toastify";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -10,27 +9,31 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch("/api/feedback", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: form.name,
-        email: form.email,
-        feedback: form.message,
-      }),
-    })
-      .then((res) => {
-        if (res.ok) {
-          setSubmitted(true);
-          setForm({ name: "", email: "", message: "" });
-        }
-      })
-      .catch((err) => console.error("Error submitting feedback:", err));
-    setTimeout(() => {
-      setSubmitted(false);
-    }, 3000);
+
+    try {
+      const res = await fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          feedback: form.message,
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        setForm({ name: "", email: "", message: "" });
+
+        setTimeout(() => setSubmitted(false), 3000);
+      } else {
+        console.error("Failed to submit feedback");
+      }
+    } catch (err) {
+      console.error("Error submitting feedback:", err);
+    }
   };
 
   return (
@@ -39,7 +42,7 @@ const Contact = () => {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-extrabold">Contact Us</h1>
         <p className="text-gray-400 mt-2">
-          Have questions or feedback? We&apos;d love to hear from you.
+          Have questions or feedback? We would love to hear from you.
         </p>
       </div>
 
@@ -51,7 +54,7 @@ const Contact = () => {
 
           {submitted ? (
             <p className="text-green-400 font-semibold">
-              ✅ Thanks for reaching out! We&apos;ll get back to you soon.
+              ✅ Thanks for reaching out! We will get back to you soon.
             </p>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -106,7 +109,7 @@ const Contact = () => {
           <h2 className="text-2xl font-bold">Get in Touch</h2>
           <p className="text-gray-400">
             Whether you have a question about your order, products, or just want
-            to say hi, we&apos;re here for you.
+            to say hi, we are here for you.
           </p>
 
           <div className="space-y-3">
@@ -115,8 +118,7 @@ const Contact = () => {
               Panchkula, India
             </p>
             <p>
-              📧 <span className="font-semibold">Email:</span>{" "}
-              support@hackerwear.com
+              📧 <span className="font-semibold">Email:</span> support@hackerwear.com
             </p>
             <p>
               📞 <span className="font-semibold">Phone:</span> +91 98765 43210
