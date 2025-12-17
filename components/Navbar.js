@@ -223,7 +223,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="logo mx-5">
           <Link href="/">
-            <Image width={50} height={120} src={Logo} alt="Logo" />
+            <Image src={Logo} alt="Logo" className="h-[50px] w-auto" />
           </Link>
         </div>
 
